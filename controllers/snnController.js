@@ -8,12 +8,12 @@ const createSsn = async (req, res) => {
 };
 
 const getAllSsn = async (req, res) => {
-    const ssn = await Ssn.find({});
+    const ssn = await Ssn.find({}).populate("person");
     res.status(StatusCodes.OK).json({ count: ssn.length, ssn });
 };
 
 const getSingleSsn= async (req, res) => {
-    const ssn = await Ssn.findOne({ _id: req.params.id });
+    const ssn = await Ssn.findOne({ _id: req.params.id }).populate("person");
     if (!ssn) {
         throw new CustomError.NotFoundError(`No ssn with id : ${ssnId}`);
     }

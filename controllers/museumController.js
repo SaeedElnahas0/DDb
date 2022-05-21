@@ -8,7 +8,7 @@ const createMuseum = async (req, res) => {
 };
 
 const getAllMuseums = async (req, res) => {
-    const museum = await Museum.find({});
+    const museum = await Museum.find({}).populate("work");
     res.status(StatusCodes.OK).json({ count: museum.length, museum });
 };
 
