@@ -1,0 +1,741 @@
+{
+	"info": {
+		"_postman_id": "3884dde9-f532-4253-a2fc-f63c0acc832a",
+		"name": "DDB2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17717964"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"mohamed\",\r\n    \"email\": \"mohamed@gmail.com\",\r\n    \"address\": \"menouf\",\r\n    \"phone\": \"1111\",\r\n    \"gender\": \"male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/person",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/person",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/person/6288a6b92bb9d20021d9c668",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"person",
+						"6288a6b92bb9d20021d9c668"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"saeed elnahas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/person/6288a6b92bb9d20021d9c668",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"person",
+						"6288a6b92bb9d20021d9c668"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/person/6288a6da2bb9d20021d9c66c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"person",
+						"6288a6da2bb9d20021d9c66c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create SSN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ssnCode\": \"zxc\",\r\n    \"person\": \"6288a6d22bb9d20021d9c66a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/ssn",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ssn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All SSN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/ssn",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ssn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single SSN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/ssn/6288ac6fa92b4cfdf859ee01",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ssn",
+						"6288ac6fa92b4cfdf859ee01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update SSN",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ssnCode\": \"xv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/ssn/6288ac6fa92b4cfdf859ee01",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ssn",
+						"6288ac6fa92b4cfdf859ee01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete SSN",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/ssn/6288ac6fa92b4cfdf859ee01",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ssn",
+						"6288ac6fa92b4cfdf859ee01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Work",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"workName\": \"a\",\r\n        \"type\": \"art\",\r\n        \"place\": \"sss\"\r\n    },\r\n    {\r\n        \"workName\": \"b\",\r\n        \"type\": \"art\",\r\n        \"place\": \"xxx\"\r\n    },\r\n    {\r\n        \"workName\": \"c\",\r\n        \"type\": \"art\",\r\n        \"place\": \"vvv\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/work",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"work"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Works",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/work",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"work"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single work",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/work/6288b2ae8b38a2b9d5f88894",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"work",
+						"6288b2ae8b38a2b9d5f88894"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Work",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workName\": \"s\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/work/6288b2ae8b38a2b9d5f88894",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"work",
+						"6288b2ae8b38a2b9d5f88894"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Work",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/work/6288b4a90b912924f9dcce7c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"work",
+						"6288b4a90b912924f9dcce7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Museum",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"aaa\",\r\n        \"location\": \"aaa\",\r\n        \"photo\": \"aaa\",\r\n        \"work\": [\"6288b4f1f8fe105c25b99a34\", \"6288b4f1f8fe105c25b99a35\"]\r\n    },\r\n    {\r\n        \"name\": \"bbb\",\r\n        \"location\": \"bbb\",\r\n        \"photo\": \"bbb\",\r\n        \"work\": [\"6288b4f1f8fe105c25b99a36\"]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/museum",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"museum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Museums",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/museum",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"museum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Museum",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ccc\",\r\n            \"location\": \"ccc\",\r\n            \"photo\": \"ccc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/museum/6288b7ed31311eb1c4bf9b1d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"museum",
+						"6288b7ed31311eb1c4bf9b1d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Museum",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/museum/6288b7ed31311eb1c4bf9b1d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"museum",
+						"6288b7ed31311eb1c4bf9b1d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ccc\",\r\n    \"type\": \"ccc\",\r\n    \"photo\": \"ccc\",\r\n    \"author\": [\"6288c23b1da41f93ca4f7a15\",\"6288c2421da41f93ca4f7a17\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/book",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/book",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ddd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/book/6288be755eec8ff09dcaca5f",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"6288be755eec8ff09dcaca5f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/book/6288be755eec8ff09dcaca5f",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"6288be755eec8ff09dcaca5f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"cccc\",\r\n    \"email\": \"cccc\",\r\n    \"address\": \"cccc\",\r\n    \"book\": [\"6288be7c5eec8ff09dcaca61\",\"6288be825eec8ff09dcaca63\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/author",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/author",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Author",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ssss\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/author/6288c22e1da41f93ca4f7a13",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author",
+						"6288c22e1da41f93ca4f7a13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Author",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/author/6288c22e1da41f93ca4f7a13",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"author",
+						"6288c22e1da41f93ca4f7a13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Agg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student\": \"saeed\",\r\n    \"homework\": [10,15,20],\r\n    \"quiz\": [1,2,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/agg",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Fields Using Agg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/agg/addFields",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg",
+						"addFields"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Using Agg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/agg/group",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match Using Agg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/agg/match",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg",
+						"match"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unwind Using Agg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/agg/unwind",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg",
+						"unwind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Project Using Agg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/agg/project",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg",
+						"project"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
