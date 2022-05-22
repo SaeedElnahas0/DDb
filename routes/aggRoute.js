@@ -6,7 +6,8 @@ const {
     group,
     match,
     unwind,
-    project
+    project,
+    lookup
 } = require('../controllers/aggController');
 
 router.post('/', createAgg);
@@ -15,5 +16,6 @@ router.get('/group', group);
 router.get('/match', match);
 router.get('/unwind', unwind);
 router.get('/project', project);
+router.get('/lookup', lookup);
 
 module.exports = router;

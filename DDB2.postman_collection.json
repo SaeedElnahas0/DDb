@@ -168,14 +168,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/ssn/6288ac6fa92b4cfdf859ee01",
+					"raw": "localhost:3000/ssn/6288ac98a92b4cfdf859ee03",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"ssn",
-						"6288ac6fa92b4cfdf859ee01"
+						"6288ac98a92b4cfdf859ee03"
 					]
 				}
 			},
@@ -530,7 +530,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"cccc\",\r\n    \"email\": \"cccc\",\r\n    \"address\": \"cccc\",\r\n    \"book\": [\"6288be7c5eec8ff09dcaca61\",\"6288be825eec8ff09dcaca63\"]\r\n}",
+					"raw": "{\r\n    \"name\": \"ahmed\",\r\n    \"email\": \"cccc\",\r\n    \"address\": \"cccc\",\r\n    \"book\": [\"6288be7c5eec8ff09dcaca61\",\"6288be825eec8ff09dcaca63\"]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -622,7 +622,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"student\": \"saeed\",\r\n    \"homework\": [10,15,20],\r\n    \"quiz\": [1,2,3]\r\n}",
+					"raw": "{\r\n    \"student\": \"ali\",\r\n    \"homework\": [10,15,20],\r\n    \"quiz\": [1,2,3]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -663,9 +663,21 @@
 		},
 		{
 			"name": "Group Using Agg",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
 				"url": {
 					"raw": "localhost:3000/agg/group",
 					"host": [
@@ -732,6 +744,25 @@
 					"path": [
 						"agg",
 						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lookup Using Agg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/agg/lookup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg",
+						"lookup"
 					]
 				}
 			},

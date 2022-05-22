@@ -7,7 +7,7 @@ const aggSchema = new mongoose.Schema(
             required: [true, 'Please provide student'],
         },
         homework: [],
-        quiz: []
+        quiz: [] 
     },
     { timestamps: true }
 );

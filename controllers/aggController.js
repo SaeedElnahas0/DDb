@@ -26,7 +26,7 @@ const group = async (req, res) => {
     const agg = await Agg.aggregate( [
         {
           $group: {
-             _id: null,
+             _id: "$student",
              count: { $sum: 1 }
           }
         }
@@ -53,20 +53,20 @@ const project  = async (req, res) => {
     res.status(StatusCodes.OK).json({ count: agg.length, agg });
 };
 
-// const lookup  = async (req, res) => {
-//     const agg = await Agg.aggregate([
-//         {
-//           $lookup:
-//             {
-//               from: "inventory",
-//               localField: "item",
-//               foreignField: "sku",
-//               as: "inventory_docs"
-//             }
-//        }
-//     ])
-//     res.status(StatusCodes.OK).json({ count: agg.length, agg });
-// };
+const lookup  = async (req, res) => {
+    const agg = await Agg.aggregate([
+        {
+          $lookup:
+            {
+              from: "authors",
+              localField: "student",
+              foreignField: "name",
+              as: "output"
+            }
+       }
+    ])
+    res.status(StatusCodes.OK).json({ count: agg.length, agg });
+};
 
 module.exports = {
     createAgg,
@@ -75,5 +75,5 @@ module.exports = {
     match,
     unwind,
     project,
-    // lookup
+    lookup
 };
