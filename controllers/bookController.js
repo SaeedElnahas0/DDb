@@ -8,7 +8,7 @@ const createBook = async (req, res) => {
 };
 
 const getAllBooks = async (req, res) => {
-    const book = await Book.find({});
+    const book = await Book.find({}).populate("author");
     res.status(StatusCodes.OK).json({ count: book.length, book });
 };
 
