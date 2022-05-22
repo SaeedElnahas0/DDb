@@ -68,6 +68,20 @@ const lookup  = async (req, res) => {
     res.status(StatusCodes.OK).json({ count: agg.length, agg });
 };
 
+const getAllAggs = async (req, res) => {
+    const agg = await Agg.find({});
+    res.status(StatusCodes.OK).json({ count: agg.length, agg });
+};
+
+//soft delete
+const softDeleteAgg = async (req, res) => {
+    const agg = await Agg.softDelete({ _id: req.params.id });
+    if (!agg) {
+        throw new CustomError.NotFoundError(`No agg with id : ${aggId}`);
+    }
+    res.status(StatusCodes.OK).json({ msg: 'Success! agg removed.' });
+};
+
 module.exports = {
     createAgg,
     addField,
@@ -75,5 +89,7 @@ module.exports = {
     match,
     unwind,
     project,
-    lookup
+    lookup,
+    getAllAggs,
+    softDeleteAgg,
 };

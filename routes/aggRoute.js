@@ -7,7 +7,9 @@ const {
     match,
     unwind,
     project,
-    lookup
+    lookup,
+    softDeleteAgg,
+    getAllAggs
 } = require('../controllers/aggController');
 
 router.post('/', createAgg);
@@ -17,5 +19,7 @@ router.get('/match', match);
 router.get('/unwind', unwind);
 router.get('/project', project);
 router.get('/lookup', lookup);
+router.get('/', getAllAggs);
+router.delete('/softDelete/:id', softDeleteAgg);
 
 module.exports = router;
