@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"mohamed\",\r\n    \"email\": \"mohamed@gmail.com\",\r\n    \"address\": \"menouf\",\r\n    \"phone\": \"1111\",\r\n    \"gender\": \"male\"\r\n}",
+					"raw": "{\r\n    \"name\": \"ahmed\",\r\n    \"email\": \"ahmed@gmail.com\",\r\n    \"address\": \"menouf\",\r\n    \"phone\": \"1111\",\r\n    \"gender\": \"male\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -57,14 +57,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/person/6288a6b92bb9d20021d9c668",
+					"raw": "localhost:3000/person/628a3b5b51153d9d532470b2",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"person",
-						"6288a6b92bb9d20021d9c668"
+						"628a3b5b51153d9d532470b2"
 					]
 				}
 			},
@@ -124,7 +124,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"ssnCode\": \"zxc\",\r\n    \"person\": \"6288a6d22bb9d20021d9c66a\"\r\n}",
+					"raw": "{\r\n    \"ssnCode\": \"zxc\",\r\n    \"person\": \"628a3b5b51153d9d532470b3\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -346,7 +346,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n    {\r\n        \"name\": \"aaa\",\r\n        \"location\": \"aaa\",\r\n        \"photo\": \"aaa\",\r\n        \"work\": [\"6288b4f1f8fe105c25b99a34\", \"6288b4f1f8fe105c25b99a35\"]\r\n    },\r\n    {\r\n        \"name\": \"bbb\",\r\n        \"location\": \"bbb\",\r\n        \"photo\": \"bbb\",\r\n        \"work\": [\"6288b4f1f8fe105c25b99a36\"]\r\n    }\r\n]",
+					"raw": "\r\n    {\r\n        \"name\": \"ccc\",\r\n        \"location\": \"ccc\",\r\n        \"photo\": \"ccc\",\r\n        \"work\": [\"628a3f92c6e741741a73d6fb\", \"628a3f92c6e741741a73d6fc\", \"628a3f92c6e741741a73d6fd\"]\r\n    }\r\n    \r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -438,7 +438,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"ccc\",\r\n    \"type\": \"ccc\",\r\n    \"photo\": \"ccc\",\r\n    \"author\": [\"6288c23b1da41f93ca4f7a15\",\"6288c2421da41f93ca4f7a17\"]\r\n}",
+					"raw": "{\r\n    \"name\": \"cccc\",\r\n    \"type\": \"cccc\",\r\n    \"photo\": \"cccc\",\r\n    \"author\": [\"628a42089eae6c558028b94f\"]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -530,7 +530,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"ahmed\",\r\n    \"email\": \"cccc\",\r\n    \"address\": \"cccc\",\r\n    \"book\": [\"6288be7c5eec8ff09dcaca61\",\"6288be825eec8ff09dcaca63\"]\r\n}",
+					"raw": "{\r\n    \"name\": \"saeed\",\r\n    \"email\": \"cccc\",\r\n    \"address\": \"cccc\",\r\n    \"book\": [\"628a4128c6e741741a73d704\",\"628a41b39eae6c558028b94b\"]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -622,7 +622,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"student\": \"ahmed\",\r\n    \"homework\": [10,15,20],\r\n    \"quiz\": [1,2,3]\r\n}",
+					"raw": "{\r\n    \"student\": \"ahmed\",\r\n    \"homework\": [1,2,4],\r\n    \"quiz\": [4,5,6]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -792,7 +792,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/agg/softDelete/6289ffc7845bcfe9945d6ed2",
+					"raw": "localhost:3000/agg/softDelete/628a3e20c6e741741a73d6ef",
 					"host": [
 						"localhost"
 					],
@@ -800,7 +800,26 @@
 					"path": [
 						"agg",
 						"softDelete",
-						"6289ffc7845bcfe9945d6ed2"
+						"628a3e20c6e741741a73d6ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Agg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/agg/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agg",
+						"all"
 					]
 				}
 			},

@@ -82,6 +82,27 @@ const softDeleteAgg = async (req, res) => {
     res.status(StatusCodes.OK).json({ msg: 'Success! agg removed.' });
 };
 
+const allAggregation = async (req, res) => {
+    const agg = await Agg.aggregate([
+        {
+            $match : { student : "saeed" } 
+        },
+        {
+            $addFields: {
+                totalHomework: { $sum: "$homework" },
+                totalQuiz: { $sum: "$quiz" },
+            },
+            },
+            {
+            $addFields: { totalScore: { $add: ["$totalHomework", "$totalQuiz"] } },
+        },
+        { $unwind : "$homework" },
+
+
+    ])
+    res.status(StatusCodes.OK).json({ agg });
+}
+
 module.exports = {
     createAgg,
     addField,
@@ -92,4 +113,5 @@ module.exports = {
     lookup,
     getAllAggs,
     softDeleteAgg,
+    allAggregation
 };
